@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" xsi:type="con:RestService" id="56f6148a-6eb6-4336-9fbe-f64b411a965a" name="FakeRESTApi.Web V1" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" definitionUrl="https://fakerestapi.azurewebsites.net/swagger/v1/swagger.json" basePath="">
-  <con:description xsi:nil="true" id="2482dc1b-a27d-4491-b8c2-3f9b154d37fd"/>
+  <con:description xsi:nil="true" id="792859a3-816b-4af0-9b50-245f9c83a1df"/>
   <con:settings id="6b640d4a-3b00-4453-a9f7-5b8aa831515e">
     <con:setting id="56f6148a-6eb6-4336-9fbe-f64b411a965afileName">FakeRESTApi.Web-V1</con:setting>
   </con:settings>
