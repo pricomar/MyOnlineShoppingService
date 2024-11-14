@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:testSuite xmlns:con="http://eviware.com/soapui/config" id="e791b870-6c1e-449f-8aa2-ff53c8b9336a" name="Nuevo Test">
-  <con:settings id="d7d91d54-ba19-461d-900f-4287607ed58d">
+  <con:settings id="ce6716f0-a992-4345-ba10-fd3d0aa2c8e7">
     <con:setting id="e791b870-6c1e-449f-8aa2-ff53c8b9336afileName">Nuevo-Test</con:setting>
   </con:settings>
   <con:runType>SEQUENTIAL</con:runType>

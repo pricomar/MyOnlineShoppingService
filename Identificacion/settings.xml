@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:testSuite xmlns:con="http://eviware.com/soapui/config" id="45f52032-342f-47a0-b1d0-cf3808ba1003" name="Identificacion">
-  <con:settings id="6e5d0b41-e83d-478c-82aa-17848bce75e0">
+  <con:settings id="8fdca2b6-7d27-494b-b098-945835133b54">
     <con:setting id="45f52032-342f-47a0-b1d0-cf3808ba1003fileName">Identificacion</con:setting>
   </con:settings>
   <con:runType>SEQUENTIAL</con:runType>

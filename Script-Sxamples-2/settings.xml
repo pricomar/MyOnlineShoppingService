@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:testSuite xmlns:con="http://eviware.com/soapui/config" id="77a56e3f-6d8c-44ef-a0d5-7cc1c31dc631" name="Script Sxamples 2">
-  <con:settings id="ce5ce8c6-fa2e-4394-804f-7220877cd218">
+  <con:settings id="5f36456e-a12f-43cf-9257-15a3e7022401">
     <con:setting id="cdbdbc86-7c58-4121-9f49-f70b74f2bd1efileName">Script-Sxamples</con:setting>
     <con:setting id="77a56e3f-6d8c-44ef-a0d5-7cc1c31dc631fileName">Script-Sxamples-2</con:setting>
   </con:settings>
