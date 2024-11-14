@@ -13,7 +13,7 @@
         <con:endpoint>http://localhost:9090</con:endpoint>
         <con:request>{\r
   "email" : "user@email.com",\r
-  "password" : "ipass"\r
+  "password" : "upass"\r
 }</con:request>
         <con:originalUri>http://localhost/auth/login</con:originalUri>
         <con:assertion id="27b37cd5-b236-4af2-a276-ffe90c56a947" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
