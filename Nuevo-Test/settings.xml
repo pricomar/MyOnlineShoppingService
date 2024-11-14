@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite xmlns:con="http://eviware.com/soapui/config" id="e791b870-6c1e-449f-8aa2-ff53c8b9336a" name="Nuevo Test">
+  <con:settings id="65ca48c4-7da8-4b00-9666-af04c5586e2b">
+    <con:setting id="e791b870-6c1e-449f-8aa2-ff53c8b9336afileName">Nuevo-Test</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>
