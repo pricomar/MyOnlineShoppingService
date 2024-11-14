@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="249c1ad0-2a01-4df7-89ee-50c9dec160ff" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Flujo Navegacion como ADMIN" searchProperties="true" timeout="0">
+  <con:settings id="ceb39ce4-c726-4373-abd5-295b8b9e2980">
+    <con:setting id="249c1ad0-2a01-4df7-89ee-50c9dec160fffileName">Flujo-Navegacion-como-ADMIN</con:setting>
+  </con:settings>
+  <con:testStep type="calltestcase" name="ejecutar Login USER" id="bb804eba-cb5a-4d28-8ecd-64dfe0e668d3">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RunTestCaseStep">
+      <con:targetTestCase>db9d31b6-7a46-4f18-94eb-2954e9335989</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>admin_token_tc</con:name>
+          <con:value>eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyLGFkbWluQGVtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlzcyI6ImNvbS5taWNyb2NvbXBhbnkiLCJpYXQiOjE3MzE0MjAyNDEsImV4cCI6MTczMTUwNjY0MX0.jgB_y1lUBQp-G00J2HbkwqdJHKsn2rDWAz1MC-iS33QcK1TW0EkkmkLLbrRaxGhnJ4Fsj8sMqt-elIFD0AgpPQ</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties>
+        <con:entry>admin_token_tc</con:entry>
+      </con:returnProperties>
+      <con:runMode>PARALLELL</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasource" name="productDataFromDB" id="93d24c59-83cc-4851-9003-9185b78af492">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSourceStep">
+      <con:dataSource type="Groovy">
+        <con:configuration>
+          <script>import groovy.sql.Sql
+
+// Preconditions: properties "name" and "serial" exist
+log.info("Reading from db ... ")
+
+// Get current row (iteration of n asked to load)
+def it = testRunner.testCase.testSteps["productDataFromDB"].currentRow;
+log.info("iter: ${it}")
+
+// DB params
+def sql = Sql.newInstance('jdbc:mysql://localhost:3306/productsdb', 'products_user', 'rapi123', 'com.mysql.jdbc.Driver')
+
+sql.eachRow("SELECT * FROM products Limit 1 OFFSET ${it} "){ row ->
+	log.info("row: ${row.name} ${row.serial}")
+	result['name'] = row.name
+	result['serial'] = row.serial
+}
+
+sql.close()</script>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>name</con:property>
+      <con:property>serial</con:property>
+      <con:startRow>1</con:startRow>
+      <con:endRow>10</con:endRow>
+      <con:recordsPerIteration>1</con:recordsPerIteration>
+      <con:completeLastOperation>true</con:completeLastOperation>
+      <con:trimValues>false</con:trimValues>
+      <con:entitizeValues>false</con:entitizeValues>
+      <con:restartOnRun>true</con:restartOnRun>
+      <con:expandProperties>false</con:expandProperties>
+      <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="create" id="7deada74-064b-43fa-a85e-00deed7d3bc6">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="Products Management API - sols" resourcePath="/products" methodName="create" xsi:type="con:RestRequestStep">
+      <con:restRequest name="create" id="582acf46-7ef0-4166-93fb-e90fd2b06601" mediaType="application/json" postQueryString="false">
+        <con:description>Endpoint para crear un producto concreto</con:description>
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;con:entry key="Authorization" value="Bearer ${ejecutar Login USER#admin_token_tc}" xmlns:con="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>http://localhost:9090</con:endpoint>
+        <con:request>{\r
+  "name" : "${productDataFromDB#name}",\r
+  "serial" : "${productDataFromDB#serial}"
+}</con:request>
+        <con:originalUri>http://localhost/products</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="8f8a27de-36e7-41eb-9c0f-cfa74c21846a" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>201</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="89364d4c-8295-47c0-98bc-1de01f8f2ce8" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath RegEx Match" id="ca34edf0-ebc6-4b14-919a-271d6442fafa" name="JSONPath RegEx Match">
+          <con:configuration>
+            <path>$.serial</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+            <regEx>[0-9]{3}-[0-9]{3}-[0-9]{4}</regEx>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="getOne" id="db002fda-0e7a-4113-9e28-ade64828355b">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="Products Management API - sols" resourcePath="/products/{pid}" methodName="getOne_1" xsi:type="con:RestRequestStep">
+      <con:restRequest name="getOne" id="af82532a-29df-4ec3-8516-19f331548774" mediaType="application/json">
+        <con:description xsi:nil="true"/>
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;con:entry key="Authorization" value="Bearer ${ejecutar Login USER#admin_token_tc}" xmlns:con="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>http://localhost:9090</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://localhost/products/1</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="0d14ae0d-d394-49ab-b64d-e187de229f7e" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="627873b7-8ee4-40e2-af33-c1b57a569d9e" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="09da309d-d65d-4b65-b57e-9f82685e666b" name="JSONPath Match">
+          <con:configuration>
+            <path>$['id']</path>
+            <content>${create#Response#$['id']}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="pid" value="${create#Response#$['id']}"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>pid</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="CreateLoop" id="8fc03f39-5706-4f40-80ad-a8e3569d3f72">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>productDataFromDB</dataSourceStep>
+      <targetStep>create</targetStep>
+      <discardResults>true</discardResults>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

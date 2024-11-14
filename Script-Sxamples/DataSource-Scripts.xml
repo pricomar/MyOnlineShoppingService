@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="34f625d5-86db-4865-b44f-e6ca79598e0d" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="DataSource Scripts" searchProperties="true" timeout="0">
+  <con:settings id="16fc9252-06d5-4542-a5d8-f1087aea21cd">
+    <con:setting id="34f625d5-86db-4865-b44f-e6ca79598e0dfileName">DataSource-Scripts</con:setting>
+  </con:settings>
+  <con:testStep type="datasource" name="Read CSV" id="70fcec78-2d58-47e1-b059-e83019c20d36">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSourceStep">
+      <con:dataSource type="Groovy">
+        <con:configuration>
+          <script>// Preconditions: properties "name" and "serial" exist
+log.info("Reading csv ... ")
+
+// Get current row (iteration of n asked to load)
+def row = testRunner.testCase.testSteps["Read CSV"].currentRow;
+log.info("row: ${row}")
+
+// CSV path
+def fileName = "C:/Curso/workspace/ready-api/data_source/books/books.csv";
+log.info("fileName: ${fileName}")
+
+def file = new File(fileName)
+
+/* RAW */
+/*def csvRows = file.readLines().tail()*.split(',')
+
+log.info("csvRows: ${csvRows.size}")
+
+if (row &lt; csvRows.size) {    
+	result['name'] = csvRows[row][0]
+	result['serial'] = csvRows[row][1]
+}*/
+
+/* EFFICIENT */
+
+String readFileLineByLine(String filePath, lineNumber) {
+    File file = new File(filePath)
+    def line, noOfLines = 0;
+    file.withReader { reader ->
+        while ((line = reader.readLine()) != null &amp;&amp; noOfLines &lt;= lineNumber) {
+            //log.info("readFileLineByLine.line: ${noOfLines} -  ${line}")
+            if(noOfLines==lineNumber) break;
+            else noOfLines++
+        }
+    }
+    return line
+}
+
+def aLine = readFileLineByLine(fileName, row+1)
+log.info("aLine: ${aLine}")
+
+if (aLine != null) {
+	def aLineArr = aLine.split(',')
+	result['name'] = aLineArr[0]
+	result['serial'] = aLineArr[1]
+}</script>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>name</con:property>
+      <con:property>serial</con:property>
+      <con:restartOnRun>true</con:restartOnRun>
+      <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasource" name="Read DB" id="9508ed15-6084-40ce-a281-7d502f4bd3c5">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSourceStep">
+      <con:dataSource type="Groovy">
+        <con:configuration>
+          <script>import groovy.sql.Sql
+
+// Preconditions: properties "name" and "serial" exist
+log.info("Reading from db ... ")
+
+// Get current row (iteration of n asked to load)
+def it = testRunner.testCase.testSteps["Read DB"].currentRow;
+log.info("iter: ${it}")
+
+// DB params
+def sql = Sql.newInstance('jdbc:mysql://localhost:3306/productsdb', 'products_user', 'rapi123', 'com.mysql.jdbc.Driver')
+
+sql.eachRow("SELECT * FROM products Limit 1 OFFSET ${it} "){ row ->
+	log.info("row: ${row.name} ${row.serial}")
+	result['name'] = row.name
+	result['serial'] = row.serial
+}
+
+sql.close()</script>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>name</con:property>
+      <con:property>serial</con:property>
+      <con:restartOnRun>true</con:restartOnRun>
+      <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

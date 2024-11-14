@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" name="/api/v1/Users/{id}" path="/api/v1/Users/{id}" id="98cda3ca-7138-4357-962e-5dd54bcd4d2a">
+  <con:settings id="dee88733-e638-4dc1-bcbb-a81a891a7532">
+    <con:setting id="98cda3ca-7138-4357-962e-5dd54bcd4d2afileName">%2Fapi%2Fv1%2FUsers%2F%7Bid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="d5d57dd6-1d53-40c9-8f66-32fe840a8b90" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>id</con:name>
+        <con:value/>
+        <con:style>TEMPLATE</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+    </con:parameters>
+    <con:request name="Request 1" id="f024cc07-72bd-4eda-bf58-dfa38bce7186" mediaType="application/json">
+      <con:description xsi:nil="true"/>
+      <con:settings/>
+      <con:endpoint>https://fakerestapi.azurewebsites.net/</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:parameterOrder>
+        <con:entry>id</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="9fca74b1-4d8c-4223-a314-6b14b1dcc534" method="DELETE">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>id</con:name>
+        <con:value/>
+        <con:style>TEMPLATE</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+    </con:parameters>
+    <con:request name="Request 1" id="7033626b-db86-41f0-9ef9-02c52578434a" mediaType="application/json">
+      <con:description xsi:nil="true"/>
+      <con:settings/>
+      <con:endpoint>https://fakerestapi.azurewebsites.net/</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:parameterOrder>
+        <con:entry>id</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+  <con:method name="PUT" id="14f82491-bc59-455a-8c1d-3530ab911bcf" method="PUT">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>id</con:name>
+        <con:value/>
+        <con:style>TEMPLATE</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>application/json; v=1.0</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent>{
+  "id" : 0,
+  "userName" : "string",
+  "password" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>text/json; v=1.0</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent>{
+  "id" : 0,
+  "userName" : "string",
+  "password" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>application/*+json; v=1.0</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent>{
+  "id" : 0,
+  "userName" : "string",
+  "password" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:request name="Request 1" id="ffea46f1-7d7c-41c6-b25d-54ed4f5eab7c" mediaType="application/json; v=1.0">
+      <con:settings/>
+      <con:endpoint>https://fakerestapi.azurewebsites.net/</con:endpoint>
+      <con:request>{\r
+  "id" : 0,\r
+  "userName" : "string",\r
+  "password" : "string"\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:parameterOrder>
+        <con:entry>id</con:entry>
+      </con:parameterOrder>
+    </con:request>
+    <con:request name="Request 2" id="07621946-3b3b-4e3e-b3dd-058c1edc02cb" mediaType="text/json; v=1.0">
+      <con:settings/>
+      <con:endpoint>https://fakerestapi.azurewebsites.net/</con:endpoint>
+      <con:request>{\r
+  "id" : 0,\r
+  "userName" : "string",\r
+  "password" : "string"\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:parameterOrder>
+        <con:entry>id</con:entry>
+      </con:parameterOrder>
+    </con:request>
+    <con:request name="Request 3" id="dd6659f0-8340-4d33-b4cf-ca09b0f14629" mediaType="application/*+json; v=1.0">
+      <con:settings/>
+      <con:endpoint>https://fakerestapi.azurewebsites.net/</con:endpoint>
+      <con:request>{\r
+  "id" : 0,\r
+  "userName" : "string",\r
+  "password" : "string"\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:parameterOrder>
+        <con:entry>id</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

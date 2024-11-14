@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" name="/auth/login" path="/auth/login" id="f033f2e5-351f-4b50-8340-e1738ec95654">
+  <con:settings id="a931e410-df8c-4470-8913-bf4f45a35d76">
+    <con:setting id="f033f2e5-351f-4b50-8340-e1738ec95654fileName">%2Fauth%2Flogin</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="login" id="d91127c6-3733-4ec1-b290-dbea741a17ae" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>*/*</con:mediaType>
+      <con:status>412</con:status>
+      <con:params/>
+      <con:description>Precondition Failed</con:description>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>*/*</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>OK</con:description>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent>{
+  "email" : "string",
+  "password" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:request name="login user" id="c342e61c-792c-4e43-b5c1-2ae98bd268b5" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://localhost:9090</con:endpoint>
+      <con:request>{\r
+  "email" : "user@email.com",\r
+  "password" : "upass"\r
+}</con:request>
+      <con:originalUri>http://localhost/auth/login</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:parameterOrder/>
+    </con:request>
+    <con:request name="login admin" id="b977d42e-1040-4ba1-b652-093818f66792" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://localhost:9090</con:endpoint>
+      <con:request>{\r
+  "email" : "admin@email.com",\r
+  "password" : "apass"\r
+}</con:request>
+      <con:originalUri>http://localhost/auth/login</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:parameterOrder/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" name="/api/v1/Authors/authors/books/{idBook}" path="/api/v1/Authors/authors/books/{idBook}" id="c4d059f4-5758-4f85-9eb1-4a96025de59f">
+  <con:settings id="99415d06-040a-4a86-8eeb-ba7a5eb4b8d5">
+    <con:setting id="c4d059f4-5758-4f85-9eb1-4a96025de59ffileName">%2Fapi%2Fv1%2FAuthors%2Fauthors%2Fbooks%2F%7BidBook%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="fc03709c-6e43-4381-84c3-b97de8f9d20e" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>idBook</con:name>
+        <con:value/>
+        <con:style>TEMPLATE</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>text/plain; v=1.0</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Success</con:description>
+      <con:sampleContent>[NOT IMPLEMENTED]</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json; v=1.0</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Success</con:description>
+      <con:sampleContent>[ {
+  "id" : 0,
+  "idBook" : 0,
+  "firstName" : "string",
+  "lastName" : "string"
+} ]</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>text/json; v=1.0</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>Success</con:description>
+      <con:sampleContent>[ {
+  "id" : 0,
+  "idBook" : 0,
+  "firstName" : "string",
+  "lastName" : "string"
+} ]</con:sampleContent>
+    </con:representation>
+    <con:request name="Request 1" id="7dccf7c3-9247-48ac-9b96-175acc43dc57" mediaType="application/json">
+      <con:description xsi:nil="true"/>
+      <con:settings/>
+      <con:endpoint>https://fakerestapi.azurewebsites.net/</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+      <con:parameterOrder>
+        <con:entry>idBook</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>
