@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" id="a85ba23a-2887-4403-a27c-b27e4dd577fa" name="/api/v1/CoverPhotos" path="/api/v1/CoverPhotos">
-  <con:settings id="81d84289-05c1-4d27-a8bf-c297de69fad7">
+<con:resource xmlns:con="http://eviware.com/soapui/config" id="a85ba23a-2887-4403-a27c-b27e4dd577fa" name="/api/v1/CoverPhotos" path="/api/v1/CoverPhotos">
+  <con:settings id="a38d2e29-7dec-46eb-b664-025d1f413ac5">
     <con:setting id="a85ba23a-2887-4403-a27c-b27e4dd577fafileName">%2Fapi%2Fv1%2FCoverPhotos</con:setting>
   </con:settings>
   <con:parameters/>

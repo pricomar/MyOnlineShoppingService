@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" id="27d6a970-97fe-4955-8273-5d25b31b56bc" keepSession="false" name="Obtengo token USER" searchProperties="true" timeout="0">
-  <con:settings id="f5f033b7-d91f-41d2-b6b1-3e301baaaed1">
+  <con:settings id="d13d09ab-3a15-4f2d-ba2f-93fe32cc3794">
     <con:setting id="e0fbd290-a739-4562-a8ef-da5b0e2428d8fileName">Obtengo-token-USER</con:setting>
     <con:setting id="27d6a970-97fe-4955-8273-5d25b31b56bcfileName">Obtengo-token-USER</con:setting>
   </con:settings>
@@ -14,7 +14,7 @@
         <con:endpoint>http://localhost:9090</con:endpoint>
         <con:request>{\r
   "email" : "user@email.com",\r
-  "password" : "XXXupass"\r
+  "password" : "upass"\r
 }</con:request>
         <con:originalUri>http://localhost/auth/login</con:originalUri>
         <con:assertion id="27b37cd5-b236-4af2-a276-ffe90c56a947" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">

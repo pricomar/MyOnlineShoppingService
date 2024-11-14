@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" id="76231b2b-46eb-40a2-bd9c-9cc0d8d47e48" keepSession="false" name="Identificacion ADMIN" searchProperties="true" timeout="0">
-  <con:settings id="7c0979a2-006c-4a47-8446-443dacfd48df">
+  <con:settings id="10bef13d-d668-4c2a-9d2f-d13f7e04945e">
     <con:setting id="db9d31b6-7a46-4f18-94eb-2954e9335989fileName">Identificacion-ADMIN</con:setting>
     <con:setting id="76231b2b-46eb-40a2-bd9c-9cc0d8d47e48fileName">Identificacion-ADMIN</con:setting>
   </con:settings>
