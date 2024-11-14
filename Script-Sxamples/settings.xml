@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:testSuite xmlns:con="http://eviware.com/soapui/config" id="cdbdbc86-7c58-4121-9f49-f70b74f2bd1e" name="Script Sxamples">
-  <con:settings id="e11f8ad1-d4a3-4e0f-8ff4-873a33241769">
+  <con:settings id="56320c4c-04d8-4353-b95a-75df43ff7e1b">
     <con:setting id="cdbdbc86-7c58-4121-9f49-f70b74f2bd1efileName">Script-Sxamples</con:setting>
   </con:settings>
   <con:runType>SEQUENTIAL</con:runType>

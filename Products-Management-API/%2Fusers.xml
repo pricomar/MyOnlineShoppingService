@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" id="f37d7b82-b9de-48f1-9dbc-46eca6844d45" name="/users" path="/users">
-  <con:settings id="45d04171-fb6e-44e4-bf71-fbbcdaccabe7">
+<con:resource xmlns:con="http://eviware.com/soapui/config" id="f37d7b82-b9de-48f1-9dbc-46eca6844d45" name="/users" path="/users">
+  <con:settings id="ee7c3ef5-6d01-4155-8ab7-f75ff11eb074">
     <con:setting id="f37d7b82-b9de-48f1-9dbc-46eca6844d45fileName">%2Fusers</con:setting>
   </con:settings>
   <con:parameters/>

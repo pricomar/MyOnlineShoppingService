@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project xmlns:con="http://eviware.com/soapui/config" activeEnvironment="Default environment" authProfile="Rol user" compositeProjectFormat="1.3" created="3.56.0" encryptionMode="Not encrypted" id="0ef11133-db6c-4e68-8fe3-71132239175c" name="MyOnlineShoppingService_Prico" projectVersion="" resourceRoot="" updated="3.56.0" abortOnError="false" runType="SEQUENTIAL">
+<con:soapui-project xmlns:con="http://eviware.com/soapui/config" abortOnError="false" activeEnvironment="Default environment" authProfile="Rol user" compositeProjectFormat="1.3" created="3.56.0" encryptionMode="Not encrypted" id="0ef11133-db6c-4e68-8fe3-71132239175c" name="MyOnlineShoppingService_Prico" projectVersion="" resourceRoot="" runType="SEQUENTIAL" updated="3.56.0">
   <con:settings>
     <con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.ProTestRunnerUIAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
   <con:entry key="Settings File Password" value=""/>

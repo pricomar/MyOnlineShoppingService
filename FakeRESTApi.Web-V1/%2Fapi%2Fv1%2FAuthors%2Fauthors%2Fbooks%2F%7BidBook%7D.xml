@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" id="c4d059f4-5758-4f85-9eb1-4a96025de59f" name="/api/v1/Authors/authors/books/{idBook}" path="/api/v1/Authors/authors/books/{idBook}">
-  <con:settings id="d9c2d0b4-8bb2-472b-aa67-8903810a2aa2">
+<con:resource xmlns:con="http://eviware.com/soapui/config" id="c4d059f4-5758-4f85-9eb1-4a96025de59f" name="/api/v1/Authors/authors/books/{idBook}" path="/api/v1/Authors/authors/books/{idBook}">
+  <con:settings id="f05408b5-d25a-4d40-81c7-e0a7ade5b69e">
     <con:setting id="c4d059f4-5758-4f85-9eb1-4a96025de59ffileName">%2Fapi%2Fv1%2FAuthors%2Fauthors%2Fbooks%2F%7BidBook%7D</con:setting>
   </con:settings>
   <con:parameters/>

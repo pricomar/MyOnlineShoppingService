@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" id="dbd2232a-d547-4c82-90d6-dcb941c5b047" keepSession="false" name="DataSource Scripts" searchProperties="true" timeout="0">
-  <con:settings id="597ad26b-4763-4867-9b13-32bd55eeb6cc">
+  <con:settings id="c78de671-6891-40f6-9ab4-cad37ebd79d2">
     <con:setting id="34f625d5-86db-4865-b44f-e6ca79598e0dfileName">DataSource-Scripts</con:setting>
     <con:setting id="dbd2232a-d547-4c82-90d6-dcb941c5b047fileName">DataSource-Scripts</con:setting>
   </con:settings>
