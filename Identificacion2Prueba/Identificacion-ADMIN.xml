@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="76231b2b-46eb-40a2-bd9c-9cc0d8d47e48" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Identificacion ADMIN" searchProperties="true" timeout="0">
+  <con:settings id="8ef61e36-bbe4-4d95-b028-85839faf768c">
+    <con:setting id="db9d31b6-7a46-4f18-94eb-2954e9335989fileName">Identificacion-ADMIN</con:setting>
+    <con:setting id="76231b2b-46eb-40a2-bd9c-9cc0d8d47e48fileName">Identificacion-ADMIN</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="login admin" id="b46427d4-9756-4018-93aa-647e5f817586">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="Products Management API - sols" resourcePath="/auth/login" methodName="login" xsi:type="con:RestRequestStep">
+      <con:restRequest name="login admin" id="7dd1a2b4-231c-4617-b2dd-d07917dd5efc" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://localhost:9090</con:endpoint>
+        <con:request>{\r
+  "email" : "admin@email.com",\r
+  "password" : "apass"\r
+}</con:request>
+        <con:originalUri>http://localhost/auth/login</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="10e7001c-594c-4cad-8e52-74dce00264d5" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="416fc00c-2c44-40a3-b28a-bf5e89579e80" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath RegEx Match" id="935ba3f3-d544-42dc-b2b7-203f5c1feb97" name="JSONPath RegEx Match">
+          <con:configuration>
+            <path>$['accessToken']</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+            <regEx>^[\w-]+\.[\w-]+\.[\w-]+$</regEx>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:parameterOrder/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasink" name="Guardar token" id="12da6142-08f5-4d48-ad8a-0d41b54d3873">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSinkStep">
+      <con:dataSink type="Property">
+        <con:configuration>
+          <prefix/>
+          <content>${login admin#Response#$['accessToken']}</content>
+          <suffix/>
+          <property>token</property>
+        </con:configuration>
+      </con:dataSink>
+      <con:properties>
+        <con:property>
+          <con:name>token</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="Update TC token" id="b3963104-cd44-4d35-9ff8-5d36c2632f0d">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:PropertyTransfersStep">
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+        <con:name>token</con:name>
+        <con:sourceType>token</con:sourceType>
+        <con:sourceStep>Guardar token</con:sourceStep>
+        <con:sourcePath/>
+        <con:targetType>admin_token_tc</con:targetType>
+        <con:targetStep>#TestCase#</con:targetStep>
+        <con:targetPath/>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:properties>
+    <con:property>
+      <con:name>admin_token_tc</con:name>
+      <con:value>eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyLGFkbWluQGVtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlzcyI6ImNvbS5taWNyb2NvbXBhbnkiLCJpYXQiOjE3MzE1NzUxMDksImV4cCI6MTczMTY2MTUwOX0.VtWtWTrXUE4bGmUL10BnVSmWxstyQMCB3M989jbB3qPH0qjejrK_cjWsEq6CTUuYhd8NlS1hANKo8mOB3wYD9g</con:value>
+    </con:property>
+  </con:properties>
+  <con:reportParameters/>
+</con:testCase>
