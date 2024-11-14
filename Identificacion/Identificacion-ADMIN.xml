@@ -84,7 +84,7 @@
   <con:properties>
     <con:property>
       <con:name>admin_token_tc</con:name>
-      <con:value>eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyLGFkbWluQGVtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlzcyI6ImNvbS5taWNyb2NvbXBhbnkiLCJpYXQiOjE3MzE0MTk3MzUsImV4cCI6MTczMTUwNjEzNX0.iCH8UGJSi1BmYt68uaj_UW1qRantsReQQtRvglQpPTNAmldh7N7J1A_Q8oKoAyoU_snFtXoUd_B0MlsLiToFvw</con:value>
+      <con:value>eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyLGFkbWluQGVtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlzcyI6ImNvbS5taWNyb2NvbXBhbnkiLCJpYXQiOjE3MzE1NzUxMDksImV4cCI6MTczMTY2MTUwOX0.VtWtWTrXUE4bGmUL10BnVSmWxstyQMCB3M989jbB3qPH0qjejrK_cjWsEq6CTUuYhd8NlS1hANKo8mOB3wYD9g</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

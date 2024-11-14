@@ -70,7 +70,7 @@
   <con:properties>
     <con:property>
       <con:name>token_user</con:name>
-      <con:value>eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxLHVzZXJAZW1haWwuY29tIiwicm9sZSI6IlVTRVIiLCJpc3MiOiJjb20ubWljcm9jb21wYW55IiwiaWF0IjoxNzMwOTcwMDcwLCJleHAiOjE3MzEwNTY0NzB9.TOJb1kvVGN_KJ7F-DgD1jTabhjRFTh-Tpx1_dL0DlqGo3vYKQQQusr1VkkT13SEjjCPYkd2FInbkIbqZatwW1w</con:value>
+      <con:value>eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxLHVzZXJAZW1haWwuY29tIiwicm9sZSI6IlVTRVIiLCJpc3MiOiJjb20ubWljcm9jb21wYW55IiwiaWF0IjoxNzMxNTc1MTA5LCJleHAiOjE3MzE2NjE1MDl9.lvWRRNAbw6bdfwjJ3GNfo5jZnWKcCE8iXX1q-yjgNVzBoJjRCj8An2xsHAemJr-muRfIyK4nMNYxKwcIXqYcyA</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
