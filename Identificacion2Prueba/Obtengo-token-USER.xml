@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" id="27d6a970-97fe-4955-8273-5d25b31b56bc" keepSession="false" name="Obtengo token USER" searchProperties="true" timeout="0">
-  <con:settings id="fdfc62a5-a4d8-41f0-9507-6e0452038871">
+  <con:settings id="6dd2f17d-cd68-4a4b-86d2-3c432829d83d">
     <con:setting id="e0fbd290-a739-4562-a8ef-da5b0e2428d8fileName">Obtengo-token-USER</con:setting>
     <con:setting id="27d6a970-97fe-4955-8273-5d25b31b56bcfileName">Obtengo-token-USER</con:setting>
   </con:settings>

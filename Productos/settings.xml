@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:testSuite xmlns:con="http://eviware.com/soapui/config" id="44ea909c-044a-464f-b08d-869048c1c0d2" name="Productos">
-  <con:settings id="88f188f1-1499-4dc7-a234-b1042ffd0e37">
+  <con:settings id="c753771a-c592-4405-862b-4eab0643c20c">
     <con:setting id="IncludeOverview">true</con:setting>
     <con:setting id="IncludeResults">true</con:setting>
     <con:setting id="FlowLayout">false</con:setting>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" id="6412b7ba-b9a3-4f85-a637-a43cfb8edf97" keepSession="false" name="Test Case for scritps" searchProperties="true" timeout="0">
-  <con:settings id="8bc95510-571b-4dd2-a5f1-ebbb0aaa4ee9">
+  <con:settings id="9a89f3bd-46b0-447c-b665-7f27d818b5a9">
     <con:setting id="IncludeOverview">true</con:setting>
     <con:setting id="IncludeResults">true</con:setting>
     <con:setting id="FlowLayout">false</con:setting>

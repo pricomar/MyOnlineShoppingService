@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:testSuite xmlns:con="http://eviware.com/soapui/config" id="e7464ab6-4f8e-4856-b79c-8362bf52cf45" name="Identificacion2Prueba">
-  <con:settings id="ec181021-23b3-41f4-b448-ec9d90b95341">
+  <con:settings id="118df1e6-a52a-4634-98f5-70bbdf88e70d">
     <con:setting id="45f52032-342f-47a0-b1d0-cf3808ba1003fileName">Identificacion</con:setting>
     <con:setting id="e7464ab6-4f8e-4856-b79c-8362bf52cf45fileName">Identificacion2Prueba</con:setting>
   </con:settings>
