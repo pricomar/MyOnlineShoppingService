@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" name="/users/{uid}" path="/users/{uid}" id="45e2f6ec-64d1-4213-86e5-2e2aaf349f29">
-  <con:settings id="f2df3566-1f30-4ff6-8ae7-da10a3c1e282">
+<con:resource xmlns:con="http://eviware.com/soapui/config" id="45e2f6ec-64d1-4213-86e5-2e2aaf349f29" name="/users/{uid}" path="/users/{uid}">
+  <con:settings id="037c549c-9cf9-43d0-aa74-56fd87a32649">
     <con:setting id="45e2f6ec-64d1-4213-86e5-2e2aaf349f29fileName">%2Fusers%2F%7Buid%7D</con:setting>
   </con:settings>
   <con:parameters/>
-  <con:method name="getOne" id="6271616d-a7ab-46fd-a347-5bbc10c35da4" method="GET">
+  <con:method id="6271616d-a7ab-46fd-a347-5bbc10c35da4" method="GET" name="getOne">
     <con:settings/>
     <con:parameters>
       <con:parameter required="true">
         <con:name>uid</con:name>
         <con:value/>
         <con:style>TEMPLATE</con:style>
-        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
-        <con:description xsi:nil="true"/>
+        <con:type>xs:string</con:type>
+        <con:description/>
       </con:parameter>
     </con:parameters>
-    <con:representation type="RESPONSE" id="">
+    <con:representation id="" type="RESPONSE">
       <con:mediaType>*/*</con:mediaType>
       <con:status>412</con:status>
       <con:params/>
       <con:description>Precondition Failed</con:description>
-      <con:sampleContent xsi:nil="true"/>
+      <con:sampleContent/>
     </con:representation>
-    <con:representation type="RESPONSE" id="">
+    <con:representation id="" type="RESPONSE">
       <con:mediaType>*/*</con:mediaType>
       <con:status>200</con:status>
       <con:params/>
       <con:description>OK</con:description>
-      <con:sampleContent xsi:nil="true"/>
+      <con:sampleContent/>
     </con:representation>
-    <con:request name="Request 1" id="72050725-2f18-4bc4-8c2c-1203dc6c24fe" mediaType="application/json">
-      <con:description xsi:nil="true"/>
+    <con:request id="72050725-2f18-4bc4-8c2c-1203dc6c24fe" mediaType="application/json" name="Request 1">
+      <con:description/>
       <con:settings/>
       <con:endpoint>http://localhost:9090</con:endpoint>
       <con:request/>
@@ -45,33 +45,33 @@
       </con:parameterOrder>
     </con:request>
   </con:method>
-  <con:method name="deleteUser" id="1b5c3271-36b9-492c-919d-f168add06872" method="DELETE">
+  <con:method id="1b5c3271-36b9-492c-919d-f168add06872" method="DELETE" name="deleteUser">
     <con:settings/>
     <con:parameters>
       <con:parameter required="true">
         <con:name>uid</con:name>
         <con:value/>
         <con:style>TEMPLATE</con:style>
-        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
-        <con:description xsi:nil="true"/>
+        <con:type>xs:string</con:type>
+        <con:description/>
       </con:parameter>
     </con:parameters>
-    <con:representation type="RESPONSE" id="">
+    <con:representation id="" type="RESPONSE">
       <con:mediaType>*/*</con:mediaType>
       <con:status>412</con:status>
       <con:params/>
       <con:description>Precondition Failed</con:description>
-      <con:sampleContent xsi:nil="true"/>
+      <con:sampleContent/>
     </con:representation>
-    <con:representation type="RESPONSE" id="">
+    <con:representation id="" type="RESPONSE">
       <con:mediaType>*/*</con:mediaType>
       <con:status>200</con:status>
       <con:params/>
       <con:description>OK</con:description>
-      <con:sampleContent xsi:nil="true"/>
+      <con:sampleContent/>
     </con:representation>
-    <con:request name="Request 1" id="3c47922f-9767-4a09-aa90-78d5b6f29327" mediaType="application/json">
-      <con:description xsi:nil="true"/>
+    <con:request id="3c47922f-9767-4a09-aa90-78d5b6f29327" mediaType="application/json" name="Request 1">
+      <con:description/>
       <con:settings/>
       <con:endpoint>http://localhost:9090</con:endpoint>
       <con:request/>
@@ -85,40 +85,40 @@
       </con:parameterOrder>
     </con:request>
   </con:method>
-  <con:method name="updateUser" id="3b4526f6-98ca-4739-981d-06dc859ff742" method="PUT">
+  <con:method id="3b4526f6-98ca-4739-981d-06dc859ff742" method="PUT" name="updateUser">
     <con:settings/>
     <con:parameters>
       <con:parameter required="true">
         <con:name>uid</con:name>
         <con:value/>
         <con:style>TEMPLATE</con:style>
-        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
-        <con:description xsi:nil="true"/>
+        <con:type>xs:string</con:type>
+        <con:description/>
       </con:parameter>
       <con:parameter required="true">
         <con:name>aUser</con:name>
         <con:value/>
         <con:style>QUERY</con:style>
-        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
-        <con:description xsi:nil="true"/>
+        <con:type>xs:string</con:type>
+        <con:description/>
       </con:parameter>
     </con:parameters>
-    <con:representation type="RESPONSE" id="">
+    <con:representation id="" type="RESPONSE">
       <con:mediaType>*/*</con:mediaType>
       <con:status>412</con:status>
       <con:params/>
       <con:description>Precondition Failed</con:description>
-      <con:sampleContent xsi:nil="true"/>
+      <con:sampleContent/>
     </con:representation>
-    <con:representation type="RESPONSE" id="">
+    <con:representation id="" type="RESPONSE">
       <con:mediaType>*/*</con:mediaType>
       <con:status>200</con:status>
       <con:params/>
       <con:description>OK</con:description>
-      <con:sampleContent xsi:nil="true"/>
+      <con:sampleContent/>
     </con:representation>
-    <con:request name="Request 1" id="7795267a-0515-4010-8d42-d2151677332c" mediaType="application/json">
-      <con:description xsi:nil="true"/>
+    <con:request id="7795267a-0515-4010-8d42-d2151677332c" mediaType="application/json" name="Request 1">
+      <con:description/>
       <con:settings/>
       <con:endpoint>http://localhost:9090</con:endpoint>
       <con:request/>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" name="/api/v1/Books/{id}" path="/api/v1/Books/{id}" id="70a6e9d4-df96-490b-9ad6-0f42622f9604">
-  <con:settings id="ca28c860-17cd-4f7d-aa88-c6b2f75a4d13">
+<con:resource xmlns:con="http://eviware.com/soapui/config" id="70a6e9d4-df96-490b-9ad6-0f42622f9604" name="/api/v1/Books/{id}" path="/api/v1/Books/{id}">
+  <con:settings id="8b55a6ff-c2bf-44dc-8cb7-c9eb5600fb51">
     <con:setting id="70a6e9d4-df96-490b-9ad6-0f42622f9604fileName">%2Fapi%2Fv1%2FBooks%2F%7Bid%7D</con:setting>
   </con:settings>
   <con:parameters/>
-  <con:method name="GET" id="8432573c-813a-4187-9323-5b21959fe90e" method="GET">
+  <con:method id="8432573c-813a-4187-9323-5b21959fe90e" method="GET" name="GET">
     <con:settings/>
     <con:parameters>
       <con:parameter required="true">
@@ -17,7 +17,7 @@
       <con:status>200</con:status>
       <con:params/>
       <con:description>Success</con:description>
-      <con:sampleContent xsi:nil="true"/>
+      <con:sampleContent/>
     </con:representation>
     <con:representation type="RESPONSE">
       <con:mediaType>application/json; v=1.0</con:mediaType>
@@ -47,8 +47,8 @@
   "publishDate" : "2015-07-20T15:49:04-07:00"
 }</con:sampleContent>
     </con:representation>
-    <con:request name="Request 1" id="72f7070f-3bf0-4433-acce-5b869bea8ad2" mediaType="application/json">
-      <con:description xsi:nil="true"/>
+    <con:request id="72f7070f-3bf0-4433-acce-5b869bea8ad2" mediaType="application/json" name="Request 1">
+      <con:description/>
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
       </con:settings>
@@ -68,19 +68,19 @@
       </con:parameterOrder>
     </con:request>
   </con:method>
-  <con:method name="DELETE" id="cdb788e9-6ba9-44ad-a5df-a52f88d203a8" method="DELETE">
+  <con:method id="cdb788e9-6ba9-44ad-a5df-a52f88d203a8" method="DELETE" name="DELETE">
     <con:settings/>
     <con:parameters>
       <con:parameter required="true">
         <con:name>id</con:name>
         <con:value/>
         <con:style>TEMPLATE</con:style>
-        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
-        <con:description xsi:nil="true"/>
+        <con:type>xs:string</con:type>
+        <con:description/>
       </con:parameter>
     </con:parameters>
-    <con:request name="Request 1" id="2af218e5-9953-4e1a-9671-5a1a93ba3a6a" mediaType="application/json">
-      <con:description xsi:nil="true"/>
+    <con:request id="2af218e5-9953-4e1a-9671-5a1a93ba3a6a" mediaType="application/json" name="Request 1">
+      <con:description/>
       <con:settings/>
       <con:endpoint>https://fakerestapi.azurewebsites.net/</con:endpoint>
       <con:request/>
@@ -94,22 +94,22 @@
       </con:parameters>
     </con:request>
   </con:method>
-  <con:method name="PUT" id="e2f0cc00-5279-4762-b140-d229ee888bf2" method="PUT">
+  <con:method id="e2f0cc00-5279-4762-b140-d229ee888bf2" method="PUT" name="PUT">
     <con:settings/>
     <con:parameters>
       <con:parameter required="true">
         <con:name>id</con:name>
         <con:value/>
         <con:style>TEMPLATE</con:style>
-        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
-        <con:description xsi:nil="true"/>
+        <con:type>xs:string</con:type>
+        <con:description/>
       </con:parameter>
     </con:parameters>
-    <con:representation type="REQUEST" id="">
+    <con:representation id="" type="REQUEST">
       <con:mediaType>application/json; v=1.0</con:mediaType>
       <con:status/>
       <con:params/>
-      <con:description xsi:nil="true"/>
+      <con:description/>
       <con:sampleContent>{
   "id" : 0,
   "title" : "string",
@@ -119,11 +119,11 @@
   "publishDate" : "2015-07-20T15:49:04-07:00"
 }</con:sampleContent>
     </con:representation>
-    <con:representation type="REQUEST" id="">
+    <con:representation id="" type="REQUEST">
       <con:mediaType>text/json; v=1.0</con:mediaType>
       <con:status/>
       <con:params/>
-      <con:description xsi:nil="true"/>
+      <con:description/>
       <con:sampleContent>{
   "id" : 0,
   "title" : "string",
@@ -133,11 +133,11 @@
   "publishDate" : "2015-07-20T15:49:04-07:00"
 }</con:sampleContent>
     </con:representation>
-    <con:representation type="REQUEST" id="">
+    <con:representation id="" type="REQUEST">
       <con:mediaType>application/*+json; v=1.0</con:mediaType>
       <con:status/>
       <con:params/>
-      <con:description xsi:nil="true"/>
+      <con:description/>
       <con:sampleContent>{
   "id" : 0,
   "title" : "string",
@@ -147,7 +147,7 @@
   "publishDate" : "2015-07-20T15:49:04-07:00"
 }</con:sampleContent>
     </con:representation>
-    <con:request name="Request 1" id="cdcb7630-85aa-420a-a64c-ea73a3071429" mediaType="application/json; v=1.0">
+    <con:request id="cdcb7630-85aa-420a-a64c-ea73a3071429" mediaType="application/json; v=1.0" name="Request 1">
       <con:settings/>
       <con:endpoint>https://fakerestapi.azurewebsites.net/</con:endpoint>
       <con:request>{\r
@@ -167,7 +167,7 @@
         <con:entry key="id" value="2"/>
       </con:parameters>
     </con:request>
-    <con:request name="Request 2" id="5c9f8de4-0194-4285-a9b5-0bc9efd84bd2" mediaType="text/json; v=1.0">
+    <con:request id="5c9f8de4-0194-4285-a9b5-0bc9efd84bd2" mediaType="text/json; v=1.0" name="Request 2">
       <con:settings/>
       <con:endpoint>https://fakerestapi.azurewebsites.net/</con:endpoint>
       <con:request>{\r
@@ -187,7 +187,7 @@
         <con:entry key="id" value="2"/>
       </con:parameters>
     </con:request>
-    <con:request name="Request 3" id="a7c455f0-38a5-4141-9ecb-c074b178f349" mediaType="application/*+json; v=1.0">
+    <con:request id="a7c455f0-38a5-4141-9ecb-c074b178f349" mediaType="application/*+json; v=1.0" name="Request 3">
       <con:settings/>
       <con:endpoint>https://fakerestapi.azurewebsites.net/</con:endpoint>
       <con:request>{\r

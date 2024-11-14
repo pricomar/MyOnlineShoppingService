@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" name="/products/{pid}" path="/products/{pid}" id="bb46c21f-4647-4266-bb90-9e1ffa580019">
-  <con:settings id="b35eaa73-6ed3-4970-8341-3f77ed352989">
+<con:resource xmlns:con="http://eviware.com/soapui/config" id="bb46c21f-4647-4266-bb90-9e1ffa580019" name="/products/{pid}" path="/products/{pid}">
+  <con:settings id="9ad1963d-d51c-4baa-a486-2a89a4d73ad4">
     <con:setting id="bb46c21f-4647-4266-bb90-9e1ffa580019fileName">%2Fproducts%2F%7Bpid%7D</con:setting>
   </con:settings>
   <con:parameters/>
-  <con:method name="getOne_1" id="65157610-ecff-4504-8955-2ead53c68476" method="GET">
+  <con:method id="65157610-ecff-4504-8955-2ead53c68476" method="GET" name="getOne_1">
     <con:settings/>
     <con:parameters>
       <con:parameter required="true">
         <con:name>pid</con:name>
         <con:value/>
         <con:style>TEMPLATE</con:style>
-        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:type>xs:string</con:type>
         <con:description>El identificador del producto</con:description>
       </con:parameter>
     </con:parameters>
-    <con:representation type="RESPONSE" id="">
+    <con:representation id="" type="RESPONSE">
       <con:mediaType>*/*</con:mediaType>
       <con:status>412</con:status>
       <con:params/>
       <con:description>Precondition Failed</con:description>
-      <con:sampleContent xsi:nil="true"/>
+      <con:sampleContent/>
     </con:representation>
-    <con:representation type="RESPONSE" id="">
+    <con:representation id="" type="RESPONSE">
       <con:mediaType>*/*</con:mediaType>
       <con:status>200</con:status>
       <con:params/>
       <con:description>Todo bien</con:description>
-      <con:sampleContent xsi:nil="true"/>
+      <con:sampleContent/>
     </con:representation>
-    <con:representation type="RESPONSE" id="">
+    <con:representation id="" type="RESPONSE">
       <con:mediaType>*/*</con:mediaType>
       <con:status>404</con:status>
       <con:params/>
       <con:description>El producto no existe</con:description>
-      <con:sampleContent xsi:nil="true"/>
+      <con:sampleContent/>
     </con:representation>
-    <con:request name="Request 1" id="e67f8813-54e4-40f5-b804-ac08e658d92e" mediaType="application/json">
-      <con:description xsi:nil="true"/>
+    <con:request id="e67f8813-54e4-40f5-b804-ac08e658d92e" mediaType="application/json" name="Request 1">
+      <con:description/>
       <con:settings/>
       <con:endpoint>http://localhost:9090</con:endpoint>
       <con:request/>
@@ -51,33 +51,33 @@
       </con:parameterOrder>
     </con:request>
   </con:method>
-  <con:method name="deleteProduct" id="11a95f83-2b8a-429a-b90a-0405d025dce4" method="DELETE">
+  <con:method id="11a95f83-2b8a-429a-b90a-0405d025dce4" method="DELETE" name="deleteProduct">
     <con:settings/>
     <con:parameters>
       <con:parameter required="true">
         <con:name>pid</con:name>
         <con:value/>
         <con:style>TEMPLATE</con:style>
-        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
-        <con:description xsi:nil="true"/>
+        <con:type>xs:string</con:type>
+        <con:description/>
       </con:parameter>
     </con:parameters>
-    <con:representation type="RESPONSE" id="">
+    <con:representation id="" type="RESPONSE">
       <con:mediaType>*/*</con:mediaType>
       <con:status>412</con:status>
       <con:params/>
       <con:description>Precondition Failed</con:description>
-      <con:sampleContent xsi:nil="true"/>
+      <con:sampleContent/>
     </con:representation>
-    <con:representation type="RESPONSE" id="">
+    <con:representation id="" type="RESPONSE">
       <con:mediaType>*/*</con:mediaType>
       <con:status>200</con:status>
       <con:params/>
       <con:description>OK</con:description>
-      <con:sampleContent xsi:nil="true"/>
+      <con:sampleContent/>
     </con:representation>
-    <con:request name="Request 1" id="1985de41-2ea6-4e0d-a82a-7ee51bd52a96" mediaType="application/json">
-      <con:description xsi:nil="true"/>
+    <con:request id="1985de41-2ea6-4e0d-a82a-7ee51bd52a96" mediaType="application/json" name="Request 1">
+      <con:description/>
       <con:settings/>
       <con:endpoint>http://localhost:9090</con:endpoint>
       <con:request/>
@@ -91,43 +91,43 @@
       </con:parameterOrder>
     </con:request>
   </con:method>
-  <con:method name="updateProduct" id="9475e7b0-aaf3-4570-af14-906dc6b70ac1" method="PUT">
+  <con:method id="9475e7b0-aaf3-4570-af14-906dc6b70ac1" method="PUT" name="updateProduct">
     <con:settings/>
     <con:parameters>
       <con:parameter required="true">
         <con:name>pid</con:name>
         <con:value/>
         <con:style>TEMPLATE</con:style>
-        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
-        <con:description xsi:nil="true"/>
+        <con:type>xs:string</con:type>
+        <con:description/>
       </con:parameter>
     </con:parameters>
-    <con:representation type="RESPONSE" id="">
+    <con:representation id="" type="RESPONSE">
       <con:mediaType>*/*</con:mediaType>
       <con:status>412</con:status>
       <con:params/>
       <con:description>Precondition Failed</con:description>
-      <con:sampleContent xsi:nil="true"/>
+      <con:sampleContent/>
     </con:representation>
-    <con:representation type="RESPONSE" id="">
+    <con:representation id="" type="RESPONSE">
       <con:mediaType>*/*</con:mediaType>
       <con:status>200</con:status>
       <con:params/>
       <con:description>OK</con:description>
-      <con:sampleContent xsi:nil="true"/>
+      <con:sampleContent/>
     </con:representation>
-    <con:representation type="REQUEST" id="">
+    <con:representation id="" type="REQUEST">
       <con:mediaType>application/json</con:mediaType>
       <con:status/>
       <con:params/>
-      <con:description xsi:nil="true"/>
+      <con:description/>
       <con:sampleContent>{
   "Id" : 234,
   "name" : "string",
   "serial" : "string"
 }</con:sampleContent>
     </con:representation>
-    <con:request name="Request 1" id="7ef667a0-5f8d-4977-a78b-2a59e3ebcb33" mediaType="application/json">
+    <con:request id="7ef667a0-5f8d-4977-a78b-2a59e3ebcb33" mediaType="application/json" name="Request 1">
       <con:settings/>
       <con:endpoint>http://localhost:9090</con:endpoint>
       <con:request>{\r

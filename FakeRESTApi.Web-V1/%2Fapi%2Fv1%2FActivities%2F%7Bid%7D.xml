@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" name="/api/v1/Activities/{id}" path="/api/v1/Activities/{id}" id="1f269314-2366-48a9-a8d9-4409c5a7c34a">
-  <con:settings id="06277dba-b3a4-4738-8eb5-ecd578a25b55">
+<con:resource xmlns:con="http://eviware.com/soapui/config" id="1f269314-2366-48a9-a8d9-4409c5a7c34a" name="/api/v1/Activities/{id}" path="/api/v1/Activities/{id}">
+  <con:settings id="8a301420-4935-4819-9328-4ac529347617">
     <con:setting id="1f269314-2366-48a9-a8d9-4409c5a7c34afileName">%2Fapi%2Fv1%2FActivities%2F%7Bid%7D</con:setting>
   </con:settings>
   <con:parameters/>
-  <con:method name="GET" id="c77a48bf-19df-4e93-927e-8b9815649d8c" method="GET">
+  <con:method id="c77a48bf-19df-4e93-927e-8b9815649d8c" method="GET" name="GET">
     <con:settings/>
     <con:parameters>
       <con:parameter required="true">
         <con:name>id</con:name>
         <con:value/>
         <con:style>TEMPLATE</con:style>
-        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
-        <con:description xsi:nil="true"/>
+        <con:type>xs:string</con:type>
+        <con:description/>
       </con:parameter>
     </con:parameters>
-    <con:representation type="RESPONSE" id="">
+    <con:representation id="" type="RESPONSE">
       <con:mediaType>text/plain; v=1.0</con:mediaType>
       <con:status>200</con:status>
       <con:params/>
       <con:description>Success</con:description>
-      <con:sampleContent xsi:nil="true"/>
+      <con:sampleContent/>
     </con:representation>
-    <con:representation type="RESPONSE" id="">
+    <con:representation id="" type="RESPONSE">
       <con:mediaType>application/json; v=1.0</con:mediaType>
       <con:status>200</con:status>
       <con:params/>
@@ -34,7 +34,7 @@
   "completed" : true
 }</con:sampleContent>
     </con:representation>
-    <con:representation type="RESPONSE" id="">
+    <con:representation id="" type="RESPONSE">
       <con:mediaType>text/json; v=1.0</con:mediaType>
       <con:status>200</con:status>
       <con:params/>
@@ -46,8 +46,8 @@
   "completed" : true
 }</con:sampleContent>
     </con:representation>
-    <con:request name="Request 1" id="fada896e-2747-4a05-b964-fd4aed42377d" mediaType="application/json">
-      <con:description xsi:nil="true"/>
+    <con:request id="fada896e-2747-4a05-b964-fd4aed42377d" mediaType="application/json" name="Request 1">
+      <con:description/>
       <con:settings/>
       <con:endpoint>https://fakerestapi.azurewebsites.net/</con:endpoint>
       <con:request/>
@@ -61,19 +61,19 @@
       </con:parameterOrder>
     </con:request>
   </con:method>
-  <con:method name="DELETE" id="3686bc25-c419-49ee-8136-4a9917274159" method="DELETE">
+  <con:method id="3686bc25-c419-49ee-8136-4a9917274159" method="DELETE" name="DELETE">
     <con:settings/>
     <con:parameters>
       <con:parameter required="true">
         <con:name>id</con:name>
         <con:value/>
         <con:style>TEMPLATE</con:style>
-        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
-        <con:description xsi:nil="true"/>
+        <con:type>xs:string</con:type>
+        <con:description/>
       </con:parameter>
     </con:parameters>
-    <con:request name="Request 1" id="662de856-ae3c-467b-ab39-913e71b918c9" mediaType="application/json">
-      <con:description xsi:nil="true"/>
+    <con:request id="662de856-ae3c-467b-ab39-913e71b918c9" mediaType="application/json" name="Request 1">
+      <con:description/>
       <con:settings/>
       <con:endpoint>https://fakerestapi.azurewebsites.net/</con:endpoint>
       <con:request/>
@@ -87,25 +87,25 @@
       </con:parameterOrder>
     </con:request>
   </con:method>
-  <con:method name="PUT" id="274b8fb4-bb1e-4d86-9cac-dbc6d879f434" method="PUT">
+  <con:method id="274b8fb4-bb1e-4d86-9cac-dbc6d879f434" method="PUT" name="PUT">
     <con:settings/>
     <con:parameters>
       <con:parameter required="true">
         <con:name>id</con:name>
         <con:value/>
         <con:style>TEMPLATE</con:style>
-        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
-        <con:description xsi:nil="true"/>
+        <con:type>xs:string</con:type>
+        <con:description/>
       </con:parameter>
     </con:parameters>
-    <con:representation type="RESPONSE" id="">
+    <con:representation id="" type="RESPONSE">
       <con:mediaType>text/plain; v=1.0</con:mediaType>
       <con:status>200</con:status>
       <con:params/>
       <con:description>Success</con:description>
-      <con:sampleContent xsi:nil="true"/>
+      <con:sampleContent/>
     </con:representation>
-    <con:representation type="RESPONSE" id="">
+    <con:representation id="" type="RESPONSE">
       <con:mediaType>application/json; v=1.0</con:mediaType>
       <con:status>200</con:status>
       <con:params/>
@@ -117,7 +117,7 @@
   "completed" : true
 }</con:sampleContent>
     </con:representation>
-    <con:representation type="RESPONSE" id="">
+    <con:representation id="" type="RESPONSE">
       <con:mediaType>text/json; v=1.0</con:mediaType>
       <con:status>200</con:status>
       <con:params/>
@@ -129,11 +129,11 @@
   "completed" : true
 }</con:sampleContent>
     </con:representation>
-    <con:representation type="REQUEST" id="">
+    <con:representation id="" type="REQUEST">
       <con:mediaType>application/json; v=1.0</con:mediaType>
       <con:status/>
       <con:params/>
-      <con:description xsi:nil="true"/>
+      <con:description/>
       <con:sampleContent>{
   "id" : 0,
   "title" : "string",
@@ -141,11 +141,11 @@
   "completed" : true
 }</con:sampleContent>
     </con:representation>
-    <con:representation type="REQUEST" id="">
+    <con:representation id="" type="REQUEST">
       <con:mediaType>text/json; v=1.0</con:mediaType>
       <con:status/>
       <con:params/>
-      <con:description xsi:nil="true"/>
+      <con:description/>
       <con:sampleContent>{
   "id" : 0,
   "title" : "string",
@@ -153,11 +153,11 @@
   "completed" : true
 }</con:sampleContent>
     </con:representation>
-    <con:representation type="REQUEST" id="">
+    <con:representation id="" type="REQUEST">
       <con:mediaType>application/*+json; v=1.0</con:mediaType>
       <con:status/>
       <con:params/>
-      <con:description xsi:nil="true"/>
+      <con:description/>
       <con:sampleContent>{
   "id" : 0,
   "title" : "string",
@@ -165,7 +165,7 @@
   "completed" : true
 }</con:sampleContent>
     </con:representation>
-    <con:request name="Request 1" id="a7958e54-086e-456c-b22e-b89cef27a0d8" mediaType="application/json; v=1.0">
+    <con:request id="a7958e54-086e-456c-b22e-b89cef27a0d8" mediaType="application/json; v=1.0" name="Request 1">
       <con:settings/>
       <con:endpoint>https://fakerestapi.azurewebsites.net/</con:endpoint>
       <con:request>{\r
@@ -183,7 +183,7 @@
         <con:entry>id</con:entry>
       </con:parameterOrder>
     </con:request>
-    <con:request name="Request 2" id="a89a33e6-bfb4-4c2d-b190-f0f452c34201" mediaType="text/json; v=1.0">
+    <con:request id="a89a33e6-bfb4-4c2d-b190-f0f452c34201" mediaType="text/json; v=1.0" name="Request 2">
       <con:settings/>
       <con:endpoint>https://fakerestapi.azurewebsites.net/</con:endpoint>
       <con:request>{\r
@@ -201,7 +201,7 @@
         <con:entry>id</con:entry>
       </con:parameterOrder>
     </con:request>
-    <con:request name="Request 3" id="e0d8af24-25b3-492b-963a-b26ad8fb79a9" mediaType="application/*+json; v=1.0">
+    <con:request id="e0d8af24-25b3-492b-963a-b26ad8fb79a9" mediaType="application/*+json; v=1.0" name="Request 3">
       <con:settings/>
       <con:endpoint>https://fakerestapi.azurewebsites.net/</con:endpoint>
       <con:request>{\r

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase xmlns:con="http://eviware.com/soapui/config" id="249c1ad0-2a01-4df7-89ee-50c9dec160ff" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Flujo Navegacion como ADMIN" searchProperties="true" timeout="0">
-  <con:settings id="ceb39ce4-c726-4373-abd5-295b8b9e2980">
+<con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" id="249c1ad0-2a01-4df7-89ee-50c9dec160ff" keepSession="false" name="Flujo Navegacion como ADMIN" searchProperties="true" timeout="0">
+  <con:settings id="3d6db97c-e879-4de8-bcc5-75839d5ea457">
     <con:setting id="249c1ad0-2a01-4df7-89ee-50c9dec160fffileName">Flujo-Navegacion-como-ADMIN</con:setting>
   </con:settings>
-  <con:testStep type="calltestcase" name="ejecutar Login USER" id="bb804eba-cb5a-4d28-8ecd-64dfe0e668d3">
+  <con:testStep id="bb804eba-cb5a-4d28-8ecd-64dfe0e668d3" name="ejecutar Login USER" type="calltestcase">
     <con:settings/>
-    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RunTestCaseStep">
+    <con:config xsi:type="con:RunTestCaseStep">
       <con:targetTestCase>db9d31b6-7a46-4f18-94eb-2954e9335989</con:targetTestCase>
       <con:properties>
         <con:property>
@@ -19,9 +19,9 @@
       <con:runMode>PARALLELL</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="productDataFromDB" id="93d24c59-83cc-4851-9003-9185b78af492">
+  <con:testStep id="93d24c59-83cc-4851-9003-9185b78af492" name="productDataFromDB" type="datasource">
     <con:settings/>
-    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSourceStep">
+    <con:config xsi:type="con:DataSourceStep">
       <con:dataSource type="Groovy">
         <con:configuration>
           <script>import groovy.sql.Sql
@@ -60,10 +60,10 @@ sql.close()</script>
       <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="create" id="7deada74-064b-43fa-a85e-00deed7d3bc6">
+  <con:testStep id="7deada74-064b-43fa-a85e-00deed7d3bc6" name="create" type="restrequest">
     <con:settings/>
-    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="Products Management API - sols" resourcePath="/products" methodName="create" xsi:type="con:RestRequestStep">
-      <con:restRequest name="create" id="582acf46-7ef0-4166-93fb-e90fd2b06601" mediaType="application/json" postQueryString="false">
+    <con:config xsi:type="con:RestRequestStep" methodName="create" resourcePath="/products" service="Products Management API - sols">
+      <con:restRequest id="582acf46-7ef0-4166-93fb-e90fd2b06601" mediaType="application/json" name="create" postQueryString="false">
         <con:description>Endpoint para crear un producto concreto</con:description>
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;con:entry key="Authorization" value="Bearer ${ejecutar Login USER#admin_token_tc}" xmlns:con="http://eviware.com/soapui/config"/></con:setting>
@@ -74,18 +74,18 @@ sql.close()</script>
   "serial" : "${productDataFromDB#serial}"
 }</con:request>
         <con:originalUri>http://localhost/products</con:originalUri>
-        <con:assertion type="Valid HTTP Status Codes" id="8f8a27de-36e7-41eb-9c0f-cfa74c21846a" name="Valid HTTP Status Codes">
+        <con:assertion id="8f8a27de-36e7-41eb-9c0f-cfa74c21846a" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>201</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="89364d4c-8295-47c0-98bc-1de01f8f2ce8" name="Response SLA">
+        <con:assertion id="89364d4c-8295-47c0-98bc-1de01f8f2ce8" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
             <SLA>200</SLA>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="JsonPath RegEx Match" id="ca34edf0-ebc6-4b14-919a-271d6442fafa" name="JSONPath RegEx Match">
+        <con:assertion id="ca34edf0-ebc6-4b14-919a-271d6442fafa" name="JSONPath RegEx Match" type="JsonPath RegEx Match">
           <con:configuration>
             <path>$.serial</path>
             <content>true</content>
@@ -104,29 +104,29 @@ sql.close()</script>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="getOne" id="db002fda-0e7a-4113-9e28-ade64828355b">
+  <con:testStep id="db002fda-0e7a-4113-9e28-ade64828355b" name="getOne" type="restrequest">
     <con:settings/>
-    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="Products Management API - sols" resourcePath="/products/{pid}" methodName="getOne_1" xsi:type="con:RestRequestStep">
-      <con:restRequest name="getOne" id="af82532a-29df-4ec3-8516-19f331548774" mediaType="application/json">
-        <con:description xsi:nil="true"/>
+    <con:config xsi:type="con:RestRequestStep" methodName="getOne_1" resourcePath="/products/{pid}" service="Products Management API - sols">
+      <con:restRequest id="af82532a-29df-4ec3-8516-19f331548774" mediaType="application/json" name="getOne">
+        <con:description/>
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;con:entry key="Authorization" value="Bearer ${ejecutar Login USER#admin_token_tc}" xmlns:con="http://eviware.com/soapui/config"/></con:setting>
         </con:settings>
         <con:endpoint>http://localhost:9090</con:endpoint>
         <con:request/>
         <con:originalUri>http://localhost/products/1</con:originalUri>
-        <con:assertion type="Valid HTTP Status Codes" id="0d14ae0d-d394-49ab-b64d-e187de229f7e" name="Valid HTTP Status Codes">
+        <con:assertion id="0d14ae0d-d394-49ab-b64d-e187de229f7e" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="627873b7-8ee4-40e2-af33-c1b57a569d9e" name="Response SLA">
+        <con:assertion id="627873b7-8ee4-40e2-af33-c1b57a569d9e" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
             <SLA>200</SLA>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="JsonPath Match" id="09da309d-d65d-4b65-b57e-9f82685e666b" name="JSONPath Match">
+        <con:assertion id="09da309d-d65d-4b65-b57e-9f82685e666b" name="JSONPath Match" type="JsonPath Match">
           <con:configuration>
             <path>$['id']</path>
             <content>${create#Response#$['id']}</content>
@@ -149,7 +149,7 @@ sql.close()</script>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasourceloop" name="CreateLoop" id="8fc03f39-5706-4f40-80ad-a8e3569d3f72">
+  <con:testStep id="8fc03f39-5706-4f40-80ad-a8e3569d3f72" name="CreateLoop" type="datasourceloop">
     <con:settings/>
     <con:config>
       <dataSourceStep>productDataFromDB</dataSourceStep>

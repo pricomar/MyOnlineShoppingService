@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase xmlns:con="http://eviware.com/soapui/config" id="2d53bd74-d67e-4829-af1c-5d3639ce5a9f" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Test Case for scritps" searchProperties="true" timeout="0">
-  <con:settings id="446eedde-4729-440d-a568-fcb9a4f195fb">
+<con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" id="2d53bd74-d67e-4829-af1c-5d3639ce5a9f" keepSession="false" name="Test Case for scritps" searchProperties="true" timeout="0">
+  <con:settings id="72dc0f05-6246-4565-a138-6335a4399473">
     <con:setting id="IncludeOverview">true</con:setting>
     <con:setting id="IncludeResults">true</con:setting>
     <con:setting id="FlowLayout">false</con:setting>
@@ -9,29 +9,29 @@
     <con:setting id="6412b7ba-b9a3-4f85-a637-a43cfb8edf97fileName">Test-Case-for-scritps</con:setting>
     <con:setting id="2d53bd74-d67e-4829-af1c-5d3639ce5a9ffileName">Test-Case-for-scritps</con:setting>
   </con:settings>
-  <con:testStep type="restrequest" name="getOne" id="fb9b6adb-9bda-488f-8de3-ed7c0a755cee">
+  <con:testStep id="fb9b6adb-9bda-488f-8de3-ed7c0a755cee" name="getOne" type="restrequest">
     <con:settings/>
-    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="FakeRESTApi.Web V1" resourcePath="/api/v1/Books/{id}" methodName="GET" xsi:type="con:RestRequestStep">
-      <con:restRequest name="getOne" id="2379b833-ed65-4657-9783-d373dd12c9d5" mediaType="application/json">
-        <con:description xsi:nil="true"/>
+    <con:config xsi:type="con:RestRequestStep" methodName="GET" resourcePath="/api/v1/Books/{id}" service="FakeRESTApi.Web V1">
+      <con:restRequest id="2379b833-ed65-4657-9783-d373dd12c9d5" mediaType="application/json" name="getOne">
+        <con:description/>
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:endpoint>https://fakerestapi.azurewebsites.net/</con:endpoint>
         <con:request/>
         <con:originalUri>https://fakerestapi.azurewebsites.net/api/v1/Books/2</con:originalUri>
-        <con:assertion type="Valid HTTP Status Codes" id="2e3e231f-a4b6-464c-9924-1157dd225d4e" name="Valid HTTP Status Codes">
+        <con:assertion id="2e3e231f-a4b6-464c-9924-1157dd225d4e" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="50ecda90-a633-488f-abb6-54e7dc969db9" name="Response SLA">
+        <con:assertion id="50ecda90-a633-488f-abb6-54e7dc969db9" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
             <SLA>700</SLA>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="GroovyScriptAssertion" id="27746681-f4d6-41bb-a82d-5a55b44cbdcf" name="Script Assertion">
+        <con:assertion id="27746681-f4d6-41bb-a82d-5a55b44cbdcf" name="Script Assertion" type="GroovyScriptAssertion">
           <con:configuration>
             <scriptText>import groovy.json.JsonSlurper
 
@@ -78,7 +78,7 @@ assert title ==~ /Book [0-9]{1,}/</scriptText>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Update test case prop" id="a6e306ed-334c-408e-9108-197422be5f98">
+  <con:testStep id="a6e306ed-334c-408e-9108-197422be5f98" name="Update test case prop" type="groovy">
     <con:settings/>
     <con:config>
       <script>log.info("============= SCRIPT UDPATE PROP =================I")
@@ -125,7 +125,7 @@ testRunner.getTestCase().getProperty(prop2ToUpdate).setValue(result)
 log.info("Test case prop 2: ${testRunner.getTestCase().getProperty(prop2ToUpdate).getValue()} ")</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Lib use" id="bb3e312d-6c90-4ef1-984e-19e9f57a7901">
+  <con:testStep id="bb3e312d-6c90-4ef1-984e-19e9f57a7901" name="Lib use" type="groovy">
     <con:settings/>
     <con:config>
       <script>import Callee
@@ -136,7 +136,7 @@ log.info(c.hello())
 Callee.salute("Ricardo",log)</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Access assertions" id="78bf04fb-5a5d-4df1-9204-e405badaca76">
+  <con:testStep id="78bf04fb-5a5d-4df1-9204-e405badaca76" name="Access assertions" type="groovy">
     <con:settings/>
     <con:config>
       <script>log.info("============= SCRIPT ACCESS ASSERTIONS  =================I")
@@ -155,9 +155,9 @@ testRunner.testCase.testSteps.each{ name,props ->
 log.info("END....")</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasink" name="Save results" id="484b7f6b-9656-4fb3-8850-82766fb3d04e">
+  <con:testStep id="484b7f6b-9656-4fb3-8850-82766fb3d04e" name="Save results" type="datasink">
     <con:settings/>
-    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSinkStep">
+    <con:config xsi:type="con:DataSinkStep">
       <con:dataSink type="Groovy">
         <con:configuration>
           <script>import groovy.sql.Sql

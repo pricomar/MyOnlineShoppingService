@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" name="/api/v1/Activities" path="/api/v1/Activities" id="955d9745-6e37-47ea-b734-3b253bfc37dd">
-  <con:settings id="8cf86ab7-306f-471c-9999-f3047d0fc2df">
+<con:resource xmlns:con="http://eviware.com/soapui/config" id="955d9745-6e37-47ea-b734-3b253bfc37dd" name="/api/v1/Activities" path="/api/v1/Activities">
+  <con:settings id="5aa3f5c4-5e63-4453-91aa-11c96ac78729">
     <con:setting id="955d9745-6e37-47ea-b734-3b253bfc37ddfileName">%2Fapi%2Fv1%2FActivities</con:setting>
   </con:settings>
   <con:parameters/>
-  <con:method name="GET" id="b359aee6-e5df-4c8b-bdd5-5af6681607ae" method="GET">
+  <con:method id="b359aee6-e5df-4c8b-bdd5-5af6681607ae" method="GET" name="GET">
     <con:settings/>
     <con:parameters/>
     <con:representation type="RESPONSE">
@@ -38,8 +38,8 @@
   "completed" : true
 } ]</con:sampleContent>
     </con:representation>
-    <con:request name="Request 1" id="d5ad45d9-5984-448d-9c1c-84fe4f837188" mediaType="application/json">
-      <con:description xsi:nil="true"/>
+    <con:request id="d5ad45d9-5984-448d-9c1c-84fe4f837188" mediaType="application/json" name="Request 1">
+      <con:description/>
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;con:entry key="Content-Type" value="application/json" xmlns:con="http://eviware.com/soapui/config"/></con:setting>
       </con:settings>
@@ -55,17 +55,17 @@
       <con:parameterOrder/>
     </con:request>
   </con:method>
-  <con:method name="POST" id="e82511cc-cc1b-4019-9b57-5975db01be0d" method="POST">
+  <con:method id="e82511cc-cc1b-4019-9b57-5975db01be0d" method="POST" name="POST">
     <con:settings/>
     <con:parameters/>
-    <con:representation type="RESPONSE" id="">
+    <con:representation id="" type="RESPONSE">
       <con:mediaType>text/plain; v=1.0</con:mediaType>
       <con:status>200</con:status>
       <con:params/>
       <con:description>Success</con:description>
-      <con:sampleContent xsi:nil="true"/>
+      <con:sampleContent/>
     </con:representation>
-    <con:representation type="RESPONSE" id="">
+    <con:representation id="" type="RESPONSE">
       <con:mediaType>application/json; v=1.0</con:mediaType>
       <con:status>200</con:status>
       <con:params/>
@@ -77,7 +77,7 @@
   "completed" : true
 }</con:sampleContent>
     </con:representation>
-    <con:representation type="RESPONSE" id="">
+    <con:representation id="" type="RESPONSE">
       <con:mediaType>text/json; v=1.0</con:mediaType>
       <con:status>200</con:status>
       <con:params/>
@@ -89,11 +89,11 @@
   "completed" : true
 }</con:sampleContent>
     </con:representation>
-    <con:representation type="REQUEST" id="">
+    <con:representation id="" type="REQUEST">
       <con:mediaType>application/json; v=1.0</con:mediaType>
       <con:status/>
       <con:params/>
-      <con:description xsi:nil="true"/>
+      <con:description/>
       <con:sampleContent>{
   "id" : 0,
   "title" : "string",
@@ -101,11 +101,11 @@
   "completed" : true
 }</con:sampleContent>
     </con:representation>
-    <con:representation type="REQUEST" id="">
+    <con:representation id="" type="REQUEST">
       <con:mediaType>text/json; v=1.0</con:mediaType>
       <con:status/>
       <con:params/>
-      <con:description xsi:nil="true"/>
+      <con:description/>
       <con:sampleContent>{
   "id" : 0,
   "title" : "string",
@@ -113,11 +113,11 @@
   "completed" : true
 }</con:sampleContent>
     </con:representation>
-    <con:representation type="REQUEST" id="">
+    <con:representation id="" type="REQUEST">
       <con:mediaType>application/*+json; v=1.0</con:mediaType>
       <con:status/>
       <con:params/>
-      <con:description xsi:nil="true"/>
+      <con:description/>
       <con:sampleContent>{
   "id" : 0,
   "title" : "string",
@@ -125,7 +125,7 @@
   "completed" : true
 }</con:sampleContent>
     </con:representation>
-    <con:request name="Request 1" id="126f3759-5125-44ff-b7d3-b15b94fe92cb" mediaType="multipart/form-data" postQueryString="false">
+    <con:request id="126f3759-5125-44ff-b7d3-b15b94fe92cb" mediaType="multipart/form-data" name="Request 1" postQueryString="false">
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
       </con:settings>
@@ -144,7 +144,7 @@
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
       <con:parameters/>
     </con:request>
-    <con:request name="Request 2" id="96e06b9a-308e-4af4-a28e-e476fe850336" mediaType="text/json; v=1.0">
+    <con:request id="96e06b9a-308e-4af4-a28e-e476fe850336" mediaType="text/json; v=1.0" name="Request 2">
       <con:settings/>
       <con:endpoint>https://fakerestapi.azurewebsites.net/</con:endpoint>
       <con:request>{\r
@@ -160,7 +160,7 @@
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
       <con:parameters/>
     </con:request>
-    <con:request name="Request 3" id="0f7ed598-6f42-467e-9e01-665bf66be84a" mediaType="application/*+json; v=1.0">
+    <con:request id="0f7ed598-6f42-467e-9e01-665bf66be84a" mediaType="application/*+json; v=1.0" name="Request 3">
       <con:settings/>
       <con:endpoint>https://fakerestapi.azurewebsites.net/</con:endpoint>
       <con:request>{\r

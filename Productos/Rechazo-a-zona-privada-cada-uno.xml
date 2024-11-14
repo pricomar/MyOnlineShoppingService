@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase xmlns:con="http://eviware.com/soapui/config" id="31f06a11-3201-4595-b158-3fad6e44ef49" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Rechazo a zona privada cada uno" searchProperties="true" timeout="0">
-  <con:settings id="77af1ce3-e645-45af-84ef-61df25e9df79">
+<con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" id="31f06a11-3201-4595-b158-3fad6e44ef49" keepSession="false" name="Rechazo a zona privada cada uno" searchProperties="true" timeout="0">
+  <con:settings id="c68a5a8e-cc5d-4914-ae31-7676335e8b07">
     <con:setting id="31f06a11-3201-4595-b158-3fad6e44ef49fileName">Rechazo-a-zona-privada-cada-uno</con:setting>
   </con:settings>
-  <con:testStep type="datasource" name="genIds" id="72fb909e-581b-47ef-9946-4755b909dddd">
+  <con:testStep id="72fb909e-581b-47ef-9946-4755b909dddd" name="genIds" type="datasource">
     <con:settings/>
-    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSourceStep">
+    <con:config xsi:type="con:DataSourceStep">
       <con:dataSource type="Data Generator">
         <con:configuration>
           <generatedDataCount>10</generatedDataCount>
@@ -36,10 +36,10 @@
       <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="getOne" id="1ec92a70-6bcb-45a3-980c-5257ed0e114d">
+  <con:testStep id="1ec92a70-6bcb-45a3-980c-5257ed0e114d" name="getOne" type="restrequest">
     <con:settings/>
-    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="Products Management API" methodName="getOne_1" resourcePath="/products/{pid}" xsi:type="con:RestRequestStep">
-      <con:restRequest name="getOne" id="d4ee3adb-0251-4203-9c8f-05ea83760c3c" mediaType="application/json">
+    <con:config xsi:type="con:RestRequestStep" methodName="getOne_1" resourcePath="/products/{pid}" service="Products Management API">
+      <con:restRequest id="d4ee3adb-0251-4203-9c8f-05ea83760c3c" mediaType="application/json" name="getOne">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -47,18 +47,18 @@
         <con:endpoint>http://localhost:9090</con:endpoint>
         <con:request/>
         <con:originalUri>http://localhost/products/1</con:originalUri>
-        <con:assertion type="Valid HTTP Status Codes" id="e46b3628-0bb1-4dc0-99d4-07778c2eacd1" name="Valid HTTP Status Codes">
+        <con:assertion id="e46b3628-0bb1-4dc0-99d4-07778c2eacd1" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>401</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="ea272b9c-1247-45ed-9ad2-28fc31b04f09" name="Response SLA">
+        <con:assertion id="ea272b9c-1247-45ed-9ad2-28fc31b04f09" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
             <SLA>200</SLA>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="GroovyScriptAssertion" id="198610a7-bf4d-4086-be24-fd642dd43650" name="Script Assertion">
+        <con:assertion id="198610a7-bf4d-4086-be24-fd642dd43650" name="Script Assertion" type="GroovyScriptAssertion">
           <con:configuration>
             <scriptText>import ProductUtils
 ProductUtils.validar401Null(messageExchange)</scriptText>
@@ -80,7 +80,7 @@ ProductUtils.validar401Null(messageExchange)</scriptText>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasourceloop" name="Data Source Loop" id="3d035464-904f-45b0-98ed-93b28c4976f5">
+  <con:testStep id="3d035464-904f-45b0-98ed-93b28c4976f5" name="Data Source Loop" type="datasourceloop">
     <con:settings/>
     <con:config>
       <dataSourceStep>genIds</dataSourceStep>

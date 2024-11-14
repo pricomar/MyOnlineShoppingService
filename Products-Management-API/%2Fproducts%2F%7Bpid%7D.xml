@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" name="/products/{pid}" path="/products/{pid}" id="8858cec8-d4c4-4a45-9c8e-3489d7d1df9b">
-  <con:settings id="c8d721d6-faf0-450e-a15c-b8ed54c3c7bd">
+<con:resource xmlns:con="http://eviware.com/soapui/config" id="8858cec8-d4c4-4a45-9c8e-3489d7d1df9b" name="/products/{pid}" path="/products/{pid}">
+  <con:settings id="fdd6825c-64af-42a5-be55-927c650cc8bf">
     <con:setting id="8858cec8-d4c4-4a45-9c8e-3489d7d1df9bfileName">%2Fproducts%2F%7Bpid%7D</con:setting>
   </con:settings>
   <con:parameters/>
-  <con:method name="getOne_1" id="2c9f52cf-4b71-40a9-848e-979d97629afa" method="GET">
+  <con:method id="2c9f52cf-4b71-40a9-848e-979d97629afa" method="GET" name="getOne_1">
     <con:description>Endpoint para obtener un producto concreto</con:description>
     <con:settings/>
     <con:parameters>
@@ -32,7 +32,7 @@
       <con:params/>
       <con:description>El producto no existe</con:description>
     </con:representation>
-    <con:request name="Request 1" id="fee68b3a-89ac-4909-82ac-0660df87ff99" mediaType="application/json">
+    <con:request id="fee68b3a-89ac-4909-82ac-0660df87ff99" mediaType="application/json" name="Request 1">
       <con:settings/>
       <con:endpoint>http://localhost:9090</con:endpoint>
       <con:request/>
@@ -54,7 +54,7 @@
       </con:entry>
     </con:environmentSpec>
   </con:method>
-  <con:method name="deleteProduct" id="90684152-6767-4a1c-9612-2258055d3400" method="DELETE">
+  <con:method id="90684152-6767-4a1c-9612-2258055d3400" method="DELETE" name="deleteProduct">
     <con:settings/>
     <con:parameters>
       <con:parameter required="true">
@@ -74,7 +74,7 @@
       <con:params/>
       <con:description>OK</con:description>
     </con:representation>
-    <con:request name="Request 1" id="e38d04ca-8c0b-41d3-be86-caf47dd6bf7f" mediaType="application/json">
+    <con:request id="e38d04ca-8c0b-41d3-be86-caf47dd6bf7f" mediaType="application/json" name="Request 1">
       <con:settings/>
       <con:endpoint>http://localhost:9090</con:endpoint>
       <con:request/>
@@ -96,7 +96,7 @@
       </con:entry>
     </con:environmentSpec>
   </con:method>
-  <con:method name="updateProduct" id="f4b2d4d1-07d1-4821-a3d5-6946b9b2942e" method="PUT">
+  <con:method id="f4b2d4d1-07d1-4821-a3d5-6946b9b2942e" method="PUT" name="updateProduct">
     <con:settings/>
     <con:parameters>
       <con:parameter required="true">
@@ -125,7 +125,7 @@
   "serial" : "string"
 }</con:sampleContent>
     </con:representation>
-    <con:request name="Request 1" id="4046e70a-6e7e-4e88-b448-1485f3d7c81f" mediaType="application/json">
+    <con:request id="4046e70a-6e7e-4e88-b448-1485f3d7c81f" mediaType="application/json" name="Request 1">
       <con:settings/>
       <con:endpoint>http://localhost:9090</con:endpoint>
       <con:request>{\r

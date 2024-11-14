@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase xmlns:con="http://eviware.com/soapui/config" id="34f625d5-86db-4865-b44f-e6ca79598e0d" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="DataSource Scripts" searchProperties="true" timeout="0">
-  <con:settings id="16fc9252-06d5-4542-a5d8-f1087aea21cd">
+<con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" id="34f625d5-86db-4865-b44f-e6ca79598e0d" keepSession="false" name="DataSource Scripts" searchProperties="true" timeout="0">
+  <con:settings id="fb1ec8ce-5c24-4b2b-8863-6b692a682cd5">
     <con:setting id="34f625d5-86db-4865-b44f-e6ca79598e0dfileName">DataSource-Scripts</con:setting>
   </con:settings>
-  <con:testStep type="datasource" name="Read CSV" id="70fcec78-2d58-47e1-b059-e83019c20d36">
+  <con:testStep id="70fcec78-2d58-47e1-b059-e83019c20d36" name="Read CSV" type="datasource">
     <con:settings/>
-    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSourceStep">
+    <con:config xsi:type="con:DataSourceStep">
       <con:dataSource type="Groovy">
         <con:configuration>
           <script>// Preconditions: properties "name" and "serial" exist
@@ -64,9 +64,9 @@ if (aLine != null) {
       <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="Read DB" id="9508ed15-6084-40ce-a281-7d502f4bd3c5">
+  <con:testStep id="9508ed15-6084-40ce-a281-7d502f4bd3c5" name="Read DB" type="datasource">
     <con:settings/>
-    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSourceStep">
+    <con:config xsi:type="con:DataSourceStep">
       <con:dataSource type="Groovy">
         <con:configuration>
           <script>import groovy.sql.Sql

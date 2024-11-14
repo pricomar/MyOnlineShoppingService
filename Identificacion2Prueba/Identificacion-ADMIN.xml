@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase xmlns:con="http://eviware.com/soapui/config" id="76231b2b-46eb-40a2-bd9c-9cc0d8d47e48" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Identificacion ADMIN" searchProperties="true" timeout="0">
-  <con:settings id="8ef61e36-bbe4-4d95-b028-85839faf768c">
+<con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" id="76231b2b-46eb-40a2-bd9c-9cc0d8d47e48" keepSession="false" name="Identificacion ADMIN" searchProperties="true" timeout="0">
+  <con:settings id="8d6c8710-e6e5-48fd-a4df-4590e1029aeb">
     <con:setting id="db9d31b6-7a46-4f18-94eb-2954e9335989fileName">Identificacion-ADMIN</con:setting>
     <con:setting id="76231b2b-46eb-40a2-bd9c-9cc0d8d47e48fileName">Identificacion-ADMIN</con:setting>
   </con:settings>
-  <con:testStep type="restrequest" name="login admin" id="b46427d4-9756-4018-93aa-647e5f817586">
+  <con:testStep id="b46427d4-9756-4018-93aa-647e5f817586" name="login admin" type="restrequest">
     <con:settings/>
-    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="Products Management API - sols" resourcePath="/auth/login" methodName="login" xsi:type="con:RestRequestStep">
-      <con:restRequest name="login admin" id="7dd1a2b4-231c-4617-b2dd-d07917dd5efc" mediaType="application/json" postQueryString="false">
+    <con:config xsi:type="con:RestRequestStep" methodName="login" resourcePath="/auth/login" service="Products Management API - sols">
+      <con:restRequest id="7dd1a2b4-231c-4617-b2dd-d07917dd5efc" mediaType="application/json" name="login admin" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -17,18 +17,18 @@
   "password" : "apass"\r
 }</con:request>
         <con:originalUri>http://localhost/auth/login</con:originalUri>
-        <con:assertion type="Valid HTTP Status Codes" id="10e7001c-594c-4cad-8e52-74dce00264d5" name="Valid HTTP Status Codes">
+        <con:assertion id="10e7001c-594c-4cad-8e52-74dce00264d5" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="416fc00c-2c44-40a3-b28a-bf5e89579e80" name="Response SLA">
+        <con:assertion id="416fc00c-2c44-40a3-b28a-bf5e89579e80" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
             <SLA>200</SLA>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="JsonPath RegEx Match" id="935ba3f3-d544-42dc-b2b7-203f5c1feb97" name="JSONPath RegEx Match">
+        <con:assertion id="935ba3f3-d544-42dc-b2b7-203f5c1feb97" name="JSONPath RegEx Match" type="JsonPath RegEx Match">
           <con:configuration>
             <path>$['accessToken']</path>
             <content>true</content>
@@ -48,9 +48,9 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasink" name="Guardar token" id="12da6142-08f5-4d48-ad8a-0d41b54d3873">
+  <con:testStep id="12da6142-08f5-4d48-ad8a-0d41b54d3873" name="Guardar token" type="datasink">
     <con:settings/>
-    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSinkStep">
+    <con:config xsi:type="con:DataSinkStep">
       <con:dataSink type="Property">
         <con:configuration>
           <prefix/>
@@ -67,10 +67,10 @@
       </con:properties>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="Update TC token" id="b3963104-cd44-4d35-9ff8-5d36c2632f0d">
+  <con:testStep id="b3963104-cd44-4d35-9ff8-5d36c2632f0d" name="Update TC token" type="transfer">
     <con:settings/>
-    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:PropertyTransfersStep">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+    <con:config xsi:type="con:PropertyTransfersStep">
+      <con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false">
         <con:name>token</con:name>
         <con:sourceType>token</con:sourceType>
         <con:sourceStep>Guardar token</con:sourceStep>
